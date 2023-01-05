@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppCSV.Models
 {
-    internal class Studies
+    internal class ActiveStudy
     {
         public string name { get; set; }
-        public string mode { get; set; }
+        public int numberOfStudents { get; set; }
     }
 }

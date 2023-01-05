@@ -8,7 +8,9 @@ namespace ConsoleAppCSV.Models
 {
     internal class University
     {
-        public Student[] Students { get; set; }
-        public Studies[] ActiveStudies { get; set; }
+        public string createdAt { get; set; }
+        public string author { get; set; }
+        public List<Student> studenci { get; set; }
+        public List<ActiveStudy> activeStudies { get; set; }
     }
 }

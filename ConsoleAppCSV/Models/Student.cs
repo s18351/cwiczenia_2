@@ -6,16 +6,24 @@ using System.Threading.Tasks;
 
 namespace ConsoleAppCSV.Models
 {
-    public class Student
+    internal class Student
     {
-        //Paweł,Kowalski375,Informatyka dzienne,Dzienne,4533,2000-02-12,375@pjwstk.edu.pl,Alina,Adam
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public int IndexNumber{ get; set; }
-        public string Birthdate { get; set; }
-        public string Email { get; set; }
-        public string MotherName { get; set; }
-        public string FatherName { get; set; }
+        public string indexNumber { get; set; }
+        public string fname { get; set; }
+        public string lname { get; set; }
+        public string birthdate { get; set; }
+        public string email { get; set; }
+        public string mothersName { get; set; }
+        public string fathersName { get; set; }
+        public Studies studies { get; set; }
 
+        public override int GetHashCode()
+        {
+            return (indexNumber.GetHashCode() + fname.GetHashCode() + lname.GetHashCode());
+        }
+        public override bool Equals(object? obj)
+        {
+            return obj != null && indexNumber == ((Student)obj).indexNumber && fname == ((Student)obj).fname && lname == ((Student)obj).lname;
+        }
     }
 }
