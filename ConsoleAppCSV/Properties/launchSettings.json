@@ -2,7 +2,7 @@
   "profiles": {
     "ConsoleAppCSV": {
       "commandName": "Project",
-      "commandLineArgs": "c:\\ c:\\ json"
+      "commandLineArgs": "C:\\Users\\jerzy\\Desktop\\APDB\\cwiczenia_2\\ConsoleAppCSV\\Data\\dane.csv .\\output.json json"
     }
   }
 }
