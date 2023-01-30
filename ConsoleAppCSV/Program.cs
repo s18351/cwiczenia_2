@@ -24,7 +24,8 @@ namespace ConsoleAppCSV
                 switch (requestedFormat)
                 {
                     case Formats.json:
-                        JSONWriter.WriteJSON(new UniversityDataReader(args[0]).ReadFile(), args[1]);
+                        //JSONWriter.WriteJSON(new UniversityDataReader(args[0]).ReadFile(), args[1]);
+                        JSONWriter.WriteJSON(new CSVReader(args[0]).ReadToObject<University>(University.CreateFromCSV), args[1]);
                         break;
                     default:
                         Console.WriteLine("Niezaimplementowane.");
